@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y \
 RUN a2enmod rewrite
 
 # Configure Apache to look for index.php first
-RUN echo "DirectoryIndex index.php index.html" >> /etc/apache2/apache2.conf
+RUN echo "DirectoryIndex login.php" >> /etc/apache2/apache2.conf
 
 # Copy application code into the container (assuming your app is in the current directory)
 COPY ./src/ /var/www/html/
