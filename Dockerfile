@@ -9,8 +9,11 @@ RUN apt-get update && apt-get install -y \
 # Enable mod_rewrite (optional for your PHP application)
 RUN a2enmod rewrite
 
+# Configure Apache to look for index.php first
+RUN echo "DirectoryIndex index.php index.html" >> /etc/apache2/apache2.conf
+
 # Copy application code into the container (assuming your app is in the current directory)
-COPY ./ /var/www/html/
+COPY ./src/ /var/www/html/
 
 # Expose Apache port (default HTTP port)
 EXPOSE 80
