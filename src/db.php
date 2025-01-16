@@ -1,9 +1,9 @@
 <?php
 // db.php
-$host = 'localhost';
-$db = 'user_db';
-$user = 'your_db_user';
-$pass = 'your_db_password';
+$host = 'dpg-cu4da4rtq21c73cpp0ug-a';
+$db = 'test_7l2g';
+$user = 'test';
+$pass = 'SG6sI0xmQQeCY0MzGV56aFc5CTNQ1hoa';
 
 $conn = pg_connect("host=$host dbname=$db user=$user password=$pass");
 
